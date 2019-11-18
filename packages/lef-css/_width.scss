@@ -1,0 +1,293 @@
+$fourk: 240em !default; /* 3840px */
+$threek: 180em !default; /* 2880px */
+$tv: 160em !default; /* 2560px */
+$hd: 120em !default; /* 1920px */
+$full: 100em !default; /* 1600px */
+$width: 90em !default; /* 1440px */
+$desktop: 80em !default; /* 1280px d */
+$laptop: 64em !default; /* 1024px l */
+$netbook: 56em !default; /* 896px n */
+$tablet: 48em !default; /* 768px t */
+$phablet: 40em !default; /* 640px f */
+$phone: 30em !default; /* 480px p */
+$watch: 20em !default; /* 320px w */
+
+$width-breakpoints: (
+  // bootstrap breakpoint xs
+    xs: 0em,
+  // 320px w
+    watch: $watch,
+  // 480px p
+    phone: $phone,
+  // bootstrap breakpoint sm
+    sm: $phone + 0.001,
+  // 640px f
+    phablet: $phablet,
+  // 768px t
+    tablet: $tablet,
+  // bootstrap breakpoint md
+    md: $tablet + 0.001,
+  // 896px n
+    netbook: $netbook,
+  // 1024px l
+    laptop: $laptop,
+  // bootstrap breakpoint lg
+    lg: $laptop + 0.001,
+  // 1280px d
+    desktop: $desktop,
+  // bootstrap breakpoint xl
+    xl: $desktop + 0.001,
+  // 1440px wd
+    width: $width,
+  // 1600px fl
+    full: $full,
+  // 1920px hd
+    hd: $hd,
+  // 2560px tv
+    tv: $tv,
+  // 2880px k3
+    threek: $threek,
+  // 3840px k4
+    fourk: $fourk
+);
+
+$grid-breakpoints: map-merge($width-breakpoints, $grid-breakpoints);
+
+$width__s: 1rem !default;
+$width__m: 2rem !default;
+$width__l: 4rem !default;
+
+/* MARGINS */
+
+$break__xl: $width;
+$break__l: $desktop;
+$break__m: $laptop;
+$break__s: $tablet;
+$break__xs: $phablet;
+
+.width {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $width__l + $width__m;
+  padding-right: $width__l + $width__m;
+
+  @include below($break__l) {
+    padding-left: $width__l;
+    padding-right: $width__l;
+  }
+
+  @include below($break__m) {
+    padding-left: $width__m;
+    padding-right: $width__m;
+  }
+
+  @include below($break__s) {
+    padding-left: $width__s;
+    padding-right: $width__s;
+  }
+
+  &.no-width {
+    max-width: 100%;
+  }
+
+  @each $breakpoint, $width in $width-breakpoints {
+    &.width__#{$breakpoint} {
+      max-width: $width;
+    }
+  }
+}
+
+/* Horizontal */
+
+.padding-h__l {
+  padding-left: $width__l + $width__m;
+  padding-right: $width__l + $width__m;
+
+  @include below($break__l) {
+    padding-left: $width__l;
+    padding-right: $width__l;
+  }
+
+  @include below($break__m) {
+    padding-left: $width__m;
+    padding-right: $width__m;
+  }
+
+  @include below($break__s) {
+    padding-left: $width__s;
+    padding-right: $width__s;
+  }
+}
+
+.margin-h__l {
+  margin-left: $width__l + $width__m;
+  margin-right: $width__l + $width__m;
+
+  @include below($break__l) {
+    margin-left: $width__l;
+    margin-right: $width__l;
+  }
+
+  @include below($break__m) {
+    margin-left: $width__m;
+    margin-right: $width__m;
+  }
+
+  @include below($break__s) {
+    margin-left: $width__s;
+    margin-right: $width__s;
+  }
+}
+
+.padding-h {
+  padding-left: $width__l;
+  padding-right: $width__l;
+
+  @include below($break__m) {
+    padding-left: $width__m;
+    padding-right: $width__m;
+  }
+
+  @include below($break__s) {
+    padding-left: $width__s;
+    padding-right: $width__s;
+  }
+}
+
+.margin-h {
+  margin-left: $width__l;
+  margin-right: $width__l;
+
+  @include below($break__m) {
+    margin-left: $width__m;
+    margin-right: $width__m;
+  }
+
+  @include below($break__s) {
+    margin-left: $width__s;
+    margin-right: $width__s;
+  }
+}
+
+.padding-h__s {
+  padding-left: $width__m;
+  padding-right: $width__m;
+
+  @include below($break__s) {
+    padding-left: $width__s;
+    padding-right: $width__s;
+  }
+}
+
+.margin-h__s {
+  margin-left: $width__m;
+  margin-right: $width__m;
+
+  @include below($break__s) {
+    margin-left: $width__s;
+    margin-right: $width__s;
+  }
+}
+
+.padding-h__xs {
+  padding-left: $width__s;
+  padding-right: $width__s;
+}
+
+.margin-h__xs {
+  margin-left: $width__s;
+  margin-right: $width__s;
+}
+
+/* Vertical */
+
+.padding-v__l {
+  padding-top: $width__l;
+  padding-bottom: $width__l;
+
+  @include below($break__l) {
+    padding-top: $width__l;
+    padding-bottom: $width__l;
+  }
+
+  @include below($break__m) {
+    padding-top: $width__m;
+    padding-bottom: $width__m;
+  }
+
+  @include below($break__s) {
+    padding-top: $width__s * 1.5;
+    padding-bottom: $width__s * 1.5;
+  }
+}
+
+.margin-v__l {
+  margin-top: $width__l + $width__m;
+  margin-bottom: $width__l + $width__m;
+
+  @include below($break__l) {
+    margin-top: $width__l;
+    margin-bottom: $width__l;
+  }
+
+  @include below($break__m) {
+    margin-top: $width__m;
+    margin-bottom: $width__m;
+  }
+
+  @include below($break__s) {
+    margin-top: $width__s * 1.5;
+    margin-bottom: $width__s * 1.5;
+  }
+}
+
+.padding-v {
+  padding-top: $width__l;
+  padding-bottom: $width__l;
+
+  @include below($break__m) {
+    padding-top: $width__m;
+    padding-bottom: $width__m;
+  }
+
+  @include below($break__s) {
+    padding-top: $width__s * 1.5;
+    padding-bottom: $width__s * 1.5;
+  }
+}
+
+.margin-v {
+  margin-top: $width__l;
+  margin-bottom: $width__l;
+
+  @include below($break__m) {
+    margin-top: $width__m;
+    margin-bottom: $width__m;
+  }
+
+  @include below($break__s) {
+    margin-top: $width__s * 1.5;
+    margin-bottom: $width__s * 1.5;
+  }
+}
+
+.padding-v__s {
+  padding-top: $width__m;
+  padding-bottom: $width__m;
+}
+
+.margin-v__s {
+  margin-top: $width__m;
+  margin-bottom: $width__m;
+}
+
+.padding-v__xs {
+  padding-top: $width__s * 1.5;
+  padding-bottom: $width__s * 1.5;
+}
+
+.margin-v__xs {
+  margin-top: $width__s * 1.5;
+  margin-bottom: $width__s * 1.5;
+}

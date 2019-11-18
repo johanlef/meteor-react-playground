@@ -1,0 +1,181 @@
+*,
+*:before,
+*:after {
+  position: relative;
+
+  box-sizing: inherit;
+}
+
+html {
+  position: relative;
+
+  height: 100%;
+  box-sizing: border-box;
+
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+body {
+  position: relative;
+
+  min-height: 100%;
+
+  display: block;
+  overflow-x: hidden;
+
+  background-color: white;
+}
+
+::-moz-selection {
+  color: white;
+  background: $primary;
+}
+::selection {
+  color: white;
+  background: $primary;
+}
+
+a {
+  text-decoration: none;
+
+  transition: $transition-base;
+}
+
+picture {
+  display: block;
+  overflow: hidden;
+
+  &:not(.contain) {
+    background: $light url('/logos/logo-toned.png') no-repeat center center;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+
+    display: block;
+  }
+}
+
+.hidden,
+[hidden] {
+  display: none !important;
+}
+
+.hidden__w,
+.hidden__watch {
+  @include below($watch) {
+    display: none !important;
+  }
+}
+
+.shown__w,
+.shown__watch {
+  @include above($watch) {
+    display: none !important;
+  }
+}
+
+.hidden__p,
+.hidden__phone {
+  @include below($phone) {
+    display: none !important;
+  }
+}
+
+.shown__p,
+.shown__phone {
+  @include above($phone) {
+    display: none !important;
+  }
+}
+
+.hidden__f,
+.hidden__phablet {
+  @include below($phablet) {
+    display: none !important;
+  }
+}
+
+.shown__f,
+.shown__phablet {
+  @include above($phablet) {
+    display: none !important;
+  }
+}
+
+.hidden__t,
+.hidden__tablet {
+  @include below($tablet) {
+    display: none !important;
+  }
+}
+
+.shown__t,
+.shown__tablet {
+  @include above($tablet) {
+    display: none !important;
+  }
+}
+
+.hidden__n,
+.hidden__netbook {
+  @include below($netbook) {
+    display: none !important;
+  }
+}
+
+.shown__n,
+.shown__netbook {
+  @include above($netbook) {
+    display: none !important;
+  }
+}
+
+.hidden__l,
+.hidden__laptop {
+  @include below($laptop) {
+    display: none !important;
+  }
+}
+
+.shown__l,
+.shown__laptop {
+  @include above($laptop) {
+    display: none !important;
+  }
+}
+
+.hidden__d,
+.hidden__desktop {
+  @include below($desktop) {
+    display: none !important;
+  }
+}
+
+.shown__d,
+.shown__desktop {
+  @include above($desktop) {
+    display: none !important;
+  }
+}
+
+.hidden__wd,
+.hidden__width {
+  @include below($width) {
+    display: none !important;
+  }
+}
+
+.shown__wd,
+.shown__width {
+  @include above($width) {
+    display: none !important;
+  }
+}

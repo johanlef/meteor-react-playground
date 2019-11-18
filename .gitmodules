@@ -1,0 +1,39 @@
+[submodule "packages/lef-translations"]
+	path = packages/lef-translations
+	url = https://github.com/LEFapps/lef-translations.git
+[submodule "packages/lef-adminlist"]
+	path = packages/lef-adminlist
+	url = https://github.com/LEFapps/lef-adminlist.git
+[submodule "packages/lef-userui"]
+	path = packages/lef-userui
+	url = https://github.com/LEFapps/lef-userui.git
+[submodule "packages/lef-alerts"]
+	path = packages/lef-alerts
+	url = https://github.com/LEFapps/lef-alerts.git
+[submodule "packages/lef-systemmailing"]
+	path = packages/lef-systemmailing
+	url = https://github.com/LEFapps/lef-systemmailing.git
+[submodule "packages/lef-forms2"]
+	path = packages/lef-forms2
+	url = https://github.com/LEFapps/lef-forms2.git
+[submodule "packages/lef-utils"]
+	path = packages/lef-utils
+	url = https://github.com/LEFapps/lef-utils.git
+[submodule "packages/lef-guard"]
+	path = packages/lef-guard
+	url = https://github.com/LEFapps/lef-guard.git
+[submodule "packages/lef-css"]
+	path = packages/lef-css
+	url = https://github.com/LEFapps/lef-css.git
+[submodule "packages/lef-analytics"]
+	path = packages/lef-analytics
+	url = https://github.com/LEFapps/lef-analytics.git
+[submodule "lef-settings"]
+	path = lef-settings
+	url = https://github.com/LEFapps/lef-settings
+[submodule "packages/lef-awsses"]
+	path = packages/lef-awsses
+	url = https://github.com/LEFapps/lef-awsses
+[submodule "packages/lef-imgupload"]
+	path = packages/lef-imgupload
+	url = https://github.com/LEFapps/lef-imgupload.git

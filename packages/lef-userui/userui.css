@@ -1,0 +1,12 @@
+.input-wrapper {
+    position: relative
+}
+
+.errspan {
+    position: absolute;
+    top: calc(50% - 0.7em);
+    right: 1rem;
+}
+.errspan:hover {
+    cursor: pointer;
+}

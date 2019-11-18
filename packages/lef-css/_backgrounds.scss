@@ -1,0 +1,149 @@
+.bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &.bg-image__fixed {
+    background-attachment: fixed;
+  }
+
+  &.bg-color {
+    &:before {
+      content: '';
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background-color: $primary;
+    }
+
+    &.bg-color__width {
+      &:before {
+        left: 50%;
+        right: auto;
+
+        width: 100vw;
+        margin-left: -50vw;
+      }
+    }
+
+    &.bg-image {
+      &:before {
+        opacity: 0.35;
+      }
+    }
+
+    &.bg-pattern {
+      &:before {
+        background-image: url('/images/patterns/default.png'); // default
+        background-position: center center;
+        background-repeat: repeat;
+        background-size: auto auto;
+      }
+
+      // add more patterns: .bg-pattern__custom, set url and size!
+    }
+
+    &.bg-opacity {
+      &:before {
+        opacity: 0.5;
+      }
+    }
+
+    &:not(.bg-color__w) {
+      color: white;
+    }
+
+    &.bg-color__w {
+      &:before {
+        background-color: white;
+      }
+    }
+
+    &.bg-color__1 {
+      &:before {
+        background-color: $primary;
+      }
+    }
+
+    &.bg-color__2 {
+      &:before {
+        background-color: $secondary;
+      }
+    }
+
+    &.bg-color__success {
+      &:before {
+        background-color: $success;
+      }
+    }
+
+    &.bg-color__danger {
+      &:before {
+        background-color: $danger;
+      }
+    }
+
+    &.bg-color__warning {
+      &:before {
+        background-color: $warning;
+      }
+    }
+
+    &.bg-color__info {
+      &:before {
+        background-color: $info;
+      }
+    }
+
+    &.bg-color__light {
+      &:before {
+        background-color: $light;
+      }
+    }
+
+    &.bg-color__dark {
+      &:before {
+        background-color: $dark;
+      }
+    }
+
+    &.bg-color__none {
+      &:before {
+        background-color: transparent;
+      }
+    }
+
+    // add other colors here: .bg-color__custom
+  }
+
+  &.bg-rounded {
+    &:before {
+      border-radius: $border-radius;
+    }
+  }
+
+  &.bg-blend {
+    &.bg-blend__multiply {
+      &:before {
+        mix-blend-mode: multiply;
+      }
+    }
+
+    &.bg-blend__lighten {
+      &:before {
+        mix-blend-mode: lighten;
+      }
+    }
+
+    &.bg-blend__lighter {
+      &:before {
+        mix-blend-mode: color-dodge;
+      }
+      opacity: 0.5;
+    }
+  }
+}

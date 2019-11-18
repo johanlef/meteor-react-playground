@@ -1,0 +1,47 @@
+{
+  "name": "meteor-react-playground",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "meteor run",
+    "dev": "meteor --settings secret/development-settings.json",
+    "prod": "meteor --settings secret/sandbox-settings.json",
+    "deploy": "DEPLOY_HOSTNAME=eu-west-1.galaxy-deploy.meteor.com meteor deploy --settings secret/sandbox-settings.json inspraakmetlef.eu.meteorapp.com --owner lefapps"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.3.4",
+    "@fortawesome/fontawesome-svg-core": "^1.2.15",
+    "@fortawesome/free-brands-svg-icons": "^5.7.2",
+    "@fortawesome/free-solid-svg-icons": "^5.7.2",
+    "@fortawesome/react-fontawesome": "^0.1.4",
+    "@lefapps/admin-dashboard": "^1.0.1",
+    "aes256": "^1.0.4",
+    "babel-runtime": "^6.26.0",
+    "bcrypt": "^3.0.6",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.3.1",
+    "custom-event-polyfill": "^1.0.6",
+    "eslint": "^4.19.1",
+    "lodash": "^4.17.15",
+    "markdown-it": "^8.4.2",
+    "meteor-node-stubs": "^0.3.2",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.25",
+    "punycode": "^1.4.1",
+    "query-string": "^5.1.1",
+    "react": "^16.9.0",
+    "react-alert": "^6.0.0",
+    "react-dom": "^16.8.3",
+    "react-ga": "^2.5.7",
+    "react-loadable": "^5.5.0",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "reactstrap": "^6.5.0",
+    "worker-loader": "^2.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-inline-import": "^2.0.6",
+    "standard": "^12.0.1"
+  }
+}
