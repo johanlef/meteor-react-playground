@@ -1,4 +1,6 @@
-import { hasToBlobSupport, promiseBlobFromCanvas, toBlob } from './blob'
+/**
+ * Basic class to interact with the canvas element for JEF.
+ */
 
 class Canvas {
   constructor ({ id, ...config }) {
@@ -12,7 +14,6 @@ class Canvas {
     return this
   }
   _setDefaults () {
-    this.context
     this.context.imageSmoothingEnabled = true
     this.context.imageSmoothingQuality = 'high'
     return this.context
@@ -32,16 +33,8 @@ class Canvas {
       .then(() => this.context.drawImage(img, 0, 0, img.width, img.height))
       .catch(error => console.error(error))
   }
-  saveImage (filename) {
-    this.context.save()
+  saveImage () {
     return this.canvas.toDataURL()
-
-    /* return hasToBlobSupport
-      ? promiseBlobFromCanvas(this.canvas, 'image/png').then(blob => {
-        blob.name = filename
-        return blob
-      })
-      : toBlob(canvas, 'image/png', filename) */
   }
 }
 

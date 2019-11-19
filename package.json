@@ -3,10 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "meteor run",
-    "dev": "meteor --settings secret/development-settings.json",
-    "prod": "meteor --settings secret/sandbox-settings.json",
-    "deploy": "DEPLOY_HOSTNAME=eu-west-1.galaxy-deploy.meteor.com meteor deploy --settings secret/sandbox-settings.json inspraakmetlef.eu.meteorapp.com --owner lefapps"
+    "start": "meteor run"
   },
   "dependencies": {
     "@babel/runtime": "^7.3.4",
