@@ -20,7 +20,7 @@
     "custom-event-polyfill": "^1.0.6",
     "eslint": "^4.19.1",
     "lodash": "^4.17.15",
-    "markdown-it": "^8.4.2",
+    "markdown-it": "^12.3.2",
     "meteor-node-stubs": "^0.3.2",
     "moment": "^2.24.0",
     "moment-timezone": "^0.5.25",
